@@ -22,25 +22,28 @@ public class Problema3 {
     public static void main(String[] args) {
         // TODO code application logic here
         entrada.useLocale(Locale.US);
-        System.out.println("Ingrese su primera nota");
-        double n1 = entrada.nextDouble();
-        System.out.println("Ingrese su segunda nota");
-        double n2 = entrada.nextDouble();
-        System.out.println("Ingrese su tercera nota");
-        double n3 = entrada.nextDouble();
-        System.out.println("Ingrese su cuarta nota");
-        double n4 = entrada.nextDouble();
+        System.out.println("Ingrese primera nota");
+        double nota1 = entrada.nextDouble();
+        System.out.println("Ingrese segunda nota");
+        double nota2 = entrada.nextDouble();
+        System.out.println("Ingrese tercera nota");
+        double nota3 = entrada.nextDouble();
+        System.out.println("Ingrese cuarta nota");
+        double nota4 = entrada.nextDouble();
         String cualitativo = "";
-        cualitativo = obtenerPromedio(n1, n2, n3, n4);
+        cualitativo =  calcularPromedio(nota1, nota2, nota3, nota4);
         System.out.printf("El promedio de las notas: %.2f; %.2f"
-                + "; %.2f; %.2f es %s\n", n1, n2, n3, n4, cualitativo);
+                + "; %.2f; %.2f es %s\n", nota1, nota2, 
+                nota3, nota4, cualitativo);
     }
 
-    public static String obtenerPromedio(double n1, double n2, double n3, double n4) {
+    public static String calcularPromedio(double nota1, double nota2,
+            double nota3, double nota4) {
         entrada.useLocale(Locale.US);
         double promedio;
-        String cualitativo = "";
-        promedio = (n1 + n2 + n3 + n4) / 4;
+        String cualitativo;
+        cualitativo = " ";
+        promedio = (nota1 + nota2 + nota3 + nota4) / 4;
         if ((promedio >= 0) && (promedio <= 5)) {
             cualitativo = "Regular";
         } else {
